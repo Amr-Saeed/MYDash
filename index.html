@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyDash Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap"
+        rel="stylesheet">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="widget-container">
+            <div class="left-column">
+                <div class="widget-tasks" id="taskContainer" draggable="true">
+                    <h2>Tasks</h2>
+                    <div class="tasks">
+                        <h3>To Be Done</h3>
+                        <ul class="to-be-done-list">
+                            <!-- Pending tasks will appear here -->
+                        </ul>
+                        <h3>Done</h3>
+                        <ul class="done-list">
+                            <!-- Completed tasks will appear here -->
+                        </ul>
+                    </div>
+                    <div class="fields">
+                        <div class="adding">
+                            <input type="text" id="taskInput" placeholder="Add Task">
+                            <input type="date" id="taskDate">
+                        </div>
+                        <button class="addTask">Add Task</button>
+                    </div>
+                </div>
+                <div class="widget-notes" id="notesContainer" draggable="true">
+                    <h2>Notes</h2>
+                    <div class="notes">
+                        <ul class="notes-list">
+                            <!-- Notes will appear here -->
+                        </ul>
+                    </div>
+                    <div class="noting">
+                        <textarea id="addNotes" placeholder="Add Your Note."></textarea>
+                        <button class="addNote">Add Note</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right-column">
+                <div class="widget-calendar" id="calendarContainer" draggable="true">
+                    <h2>Schedule</h2>
+                    <div class="calendar-controls">
+                        <button id="prevMonth">
+                            <i class="fas fa-chevron-left"></i> <!-- Previous month icon -->
+                        </button>
+                        <h3 id="calendarMonthName"></h3> <!-- Month Name -->
+                        <button id="nextMonth">
+                            <i class="fas fa-chevron-right"></i> <!-- Next month icon -->
+                        </button>
+                    </div>
+                    <div class="calendar" id="calendar">
+                        <!-- Calendar will be generated here -->
+                    </div>
+                    <div class="events-list">
+                        <h3>Upcoming Events</h3>
+                        <ul id="eventList">
+                            <!-- Events will be listed here -->
+                        </ul>
+                    </div>
+                    <div class="add-event">
+                        <input type="text" id="eventTitle" placeholder="Event Title">
+                        <input type="date" id="eventDate">
+                        <input type="time" id="eventTime">
+                        <button id="addEventButton">Add Event</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
